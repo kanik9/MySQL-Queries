@@ -6,6 +6,11 @@ If Nested Queries came than solve first those queries which are present in brack
 https://www.w3resource.com/mysql/subqueries/index.php
 
 
+
+
+
+
+
 MySQL data type
 
 """
@@ -69,6 +74,54 @@ LONGBLOB or LONGTEXT − A BLOB or TEXT column with a maximum length of 42949672
 
 ENUM − An enumeration, which is a fancy term for list. When defining an ENUM, you are creating a list of items from which the value must be selected (or it can be NULL). For example, if you wanted your field to contain "A" or "B" or "C", you would define your ENUM as ENUM ('A', 'B', 'C') and only those values (or NULL) could ever populate that field.
 """
+
+
+
+
+
+MySQL WHERE clause
+
+"""
+We have seen the SQL SELECT command to fetch data from a MySQL table. We can use a conditional clause called the WHERE Clause to filter out the results. Using this WHERE clause, we can specify a selection criteria to select the required records from a table.
+
+Syntax
+The following code block has a generic SQL syntax of the SELECT command with the WHERE clause to fetch data from the MySQL table −
+
+SELECT field1, field2,...fieldN table_name1, table_name2...
+[WHERE condition1 [AND [OR]] condition2.....
+You can use one or more tables separated by a comma to include various conditions using a WHERE clause, but the WHERE clause is an optional part of the SELECT command.
+
+You can specify any condition using the WHERE clause.
+
+You can specify more than one condition using the AND or the OR operators.
+
+A WHERE clause can be used along with DELETE or UPDATE SQL command also to specify a condition.
+
+The WHERE clause works like an if condition in any programming language. This clause is used to compare the given value with the field value available in a MySQL table. If the given value from outside is equal to the available field value in the MySQL table, then it returns that row.
+
+Here is the list of operators, which can be used with the WHERE clause.
+
+Assume field A holds 10 and field B holds 20, then −
+
+Operator	Description	Example
+=	Checks if the values of the two operands are equal or not, if yes, then the condition becomes true.	(A = B) is not true.
+!=	Checks if the values of the two operands are equal or not, if the values are not equal then the condition becomes true.	(A != B) is true.
+>	Checks if the value of the left operand is greater than the value of the right operand, if yes, then the condition becomes true.	(A > B) is not true.
+<	Checks if the value of the left operand is less than the value of the right operand, if yes then the condition becomes true.	(A < B) is true.
+>=	Checks if the value of the left operand is greater than or equal to the value of the right operand, if yes, then the condition becomes true.	(A >= B) is not true.
+<=	Checks if the value of the left operand is less than or equal to the value of the right operand, if yes, then the condition becomes true.	(A <= B) is true.
+The WHERE clause is very useful when you want to fetch the selected rows from a table, especially when you use the MySQL Join. Joins are discussed in another chapter.
+
+It is a common practice to search for records using the Primary Key to make the search faster.
+
+If the given condition does not match any record in the table, then the query would not return any row.
+"""
+
+
+
+
+
+
 
 MySQL Function 
 """ 
